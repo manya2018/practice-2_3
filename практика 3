@@ -25,3 +25,48 @@ int main() {
     
     return 0;
     }
+TASK 2
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    system("chcp 65001");
+    int a,b;
+    char oper;
+    cout << "введите последоватьельно первое, второе  числа и операцию (*/-/+/:)"<< endl;
+    cin >> a >> b >> oper;
+    try
+    {
+        if (b == 0)
+        {
+            throw b;
+        }
+        switch(oper)
+        {
+            case '*' :
+                cout << a*b <<endl;
+                break;
+            case '+' :
+                cout << a+b << endl;
+                break;
+            case '-' :
+                cout <<"Результат операции"<< a+b <<endl;
+            case ':' :
+                cout <<"Результат операции"<< a/b << endl;
+        }
+
+    }
+    catch (int b)
+    {
+
+        cout << "don’t divide by zero" << endl;
+
+    }
+    catch (const std::string &str)
+    {
+        cout << "enter a number, not a symbol" << endl;
+    }
+    return 0;
+}
+
