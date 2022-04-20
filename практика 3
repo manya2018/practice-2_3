@@ -38,7 +38,7 @@ int main() {
     cin >> a >> b >> oper;
     try
     {
-        if (b == 0)
+        if (b == 0,oper== ':')
         {
             throw b;
         }
@@ -54,6 +54,9 @@ int main() {
                 cout <<"Результат операции"<< a+b <<endl;
             case ':' :
                 cout <<"Результат операции"<< a/b << endl;
+            defoult:
+                cout << "enter a number, not a symbol "  << endl;
+               
         }
 
     }
@@ -63,10 +66,7 @@ int main() {
         cout << "don’t divide by zero" << endl;
 
     }
-    catch (const std::string &str)
-    {
-        cout << "enter a number, not a symbol" << endl;
-    }
+    
     return 0;
 }
 
